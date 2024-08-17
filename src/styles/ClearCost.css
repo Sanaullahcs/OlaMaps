@@ -1,0 +1,59 @@
+.eco-container-cost{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+
+.eco-subheading-cost{
+    color: #555555cd !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 28px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 600px !important;
+    margin-top: 20px !important;
+
+}
+
+.right-button-cost {
+    width: 188px !important;
+  height: 55px !important;
+  background-color: #6E00DC !important;
+  border-radius: 46px !important;
+  color: white !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  margin-top: 20px !important;
+
+  }
+  .css-il8bgf-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+    margin: 0px 0 !important;
+}
+
+.query-style{
+    color: #0A0A0A !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    font-family: "Nunito Sans", sans-serif !important;
+
+}
+.query-ans{
+    color: #777777 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 1100px !important;
+    margin-left: 20px !important;
+}
+
+.padding-accordion{
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+.padding-clear{
+    margin-left: 120px;
+    padding-bottom: 100px;
+}
