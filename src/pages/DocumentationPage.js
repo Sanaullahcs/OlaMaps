@@ -1,17 +1,20 @@
-// HomePage.js
 import React from "react";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import Nav from "../components/Layout/Nav";
+import CommonFooter from "../components/Layout/CommonFooter"
+import Dacumentations from "../components/Dacumentations/overview"
 
-const Home = () => {
-  return (
-    <div>
-      <Typography variant="h1">Home Page</Typography>
-      <Button variant="contained" color="primary">
-        Click Me
-      </Button>
-    </div>
+
+
+function contact() {
+  return ( 
+     <>
+     <Nav />
+<Dacumentations />
+
+   
+     <CommonFooter />
+     </>
   );
-};
+}
 
-export default Home;
+export default contact;

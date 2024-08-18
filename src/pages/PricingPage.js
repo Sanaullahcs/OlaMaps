@@ -1,13 +1,22 @@
 import React from "react";
+import Nav from "../components/Layout/Nav";
+import Hero from "../components/PricingComp/HomeHeader";
+import FaqAccordion from "../components/PricingComp/FaqAccordion";
+import PricingTable from "../components/PricingComp/PricingTable";
+import CommonFooter from "../components/Layout/CommonFooter"
+import UseagebasedPricing from "../components/PricingComp/UseagebasedPricing"
+
 
 function contact() {
-  return (
-    <div className="home">
-      <header className="App-header">
-        <h1>Welcome to React</h1>
-        <p>This is your basic React app structure. cohhhhhhhhhhhhntact</p>
-      </header>
-    </div>
+  return ( 
+     <>
+     <Nav />
+     <Hero/>
+     <PricingTable />
+     <UseagebasedPricing/>
+     <FaqAccordion />
+     <CommonFooter />
+     </>
   );
 }
 
