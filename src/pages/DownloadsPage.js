@@ -1,14 +1,23 @@
+// HomePage.js
 import React from "react";
+import "../styles/header.css";
+import Nav from "../components/Layout/Nav";
+import DownloadsHeader from "../components/Downloads.js/DownloadsHeader";
+import DownloadsCards from "../components/Downloads.js/DownloadCards";
 
-function services() {
+import CommonFooter from "../components/Layout/CommonFooter"
+
+const Home = () => {
   return (
-    <div className="home">
-      <header className="App-header">
-        <h1>Welcome to React</h1>
-        <p>This is your basic React app structure. services</p>
-      </header>
-    </div>
+    <>
+    
+      <Nav />
+      <DownloadsHeader/>
+      <DownloadsCards/>
+     
+      <CommonFooter />
+    </>
   );
-}
+};
 
-export default services;
+export default Home;

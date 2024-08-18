@@ -104,4 +104,145 @@ border-radius: 46px !important;
   .card-4 {
     background-color: white;
   }
+  .hero-heading-pricing {
+    font-size: 56px !important;
+    font-weight: 700 !important;
+    line-height: 67px;
+    text-transform: none !important;
+     font-family: "Nunito Sans", sans-serif !important;
+     padding-top: 90px !important;
+
+  }
+
   
+  .hero-subheading-pricing {
+    color: #555555ce;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 28px;
+    text-transform: none !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 600px;
+
+
+  }
+  .line-img-pricing{
+    width: 100%;
+    margin-top: 120px !important;
+    margin-bottom: 50px;
+  }
+
+  /* mapping card */
+
+  /* SdkCard.css */
+
+.sdk-card-container {
+  max-width: 100%;
+  padding: 24px;
+  border-radius: 15px;
+ border: 1px solid #00000033;
+ height: 95%;
+}
+
+.sdk-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.sdk-card-heading {
+  color: black !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 43px !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  text-decoration: none !important;
+}
+.sdk-card-subheading {
+  color: #555555 !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 28px !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  text-decoration: none !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  max-width: 350px;
+}
+
+.sdk-button-container {
+  display: flex;
+  gap: 16px; /* Space between buttons */
+  margin-bottom: 30px;
+
+}
+
+.sdk-button-primary {
+  width: 200px !important;
+    height: 59px !important;
+    background-color: #6E00DC !important;
+    border-radius: 46px !important;
+    color: white !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    margin-left: 10px !important;
+    border: 1px solid #6E00DC !important;
+}
+.sdk-button-support{
+  width: 165px !important;
+    height: 47px !important;
+    background-color: #6E00DC !important;
+    border-radius: 46px !important;
+    color: white !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    border: 1px solid #6E00DC !important;
+    margin-top: 40px !important;
+}
+
+.sdk-button-outline {
+  width: 200px !important;
+    height: 59px !important;
+    background-color: transparent !important;
+    border-radius: 46px !important;
+    color: #6E00DC !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    border: 1px solid #6E00DC !important;
+}
+.sdk-width{
+  width: 80% !important;
+  margin: 0 auto;
+
+}
+.sdk-card-link {
+  margin-top: 10px;
+}
+
+.sdk-link {
+  color: #6E00DC;
+  text-decoration: underline;
+  font-size: 22px;
+  font-family: "Nunito Sans", sans-serif !important;
+
+
+}
+
+.sdk-link:hover {
+  text-decoration: underline;
+}
+
+.sdk-card-container-support{
+box-shadow: 0px 4px 8px 0px #00000026;
+padding: 50px;
+margin-top: 100px;
+
+}
