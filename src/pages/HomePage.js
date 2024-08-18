@@ -11,7 +11,9 @@ import CommonFooter from "../components/Layout/CommonFooter"
 const Home = () => {
   return (
     <>
-    
+    <div>
+      
+    </div>
       <Nav />
       <Hero/>
       <HomeCarousel />

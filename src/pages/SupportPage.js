@@ -1,14 +1,25 @@
+// HomePage.js
 import React from "react";
+import "../styles/header.css";
+import Nav from "../components/Layout/Nav";
+import SupportHeader from "../components/SupportPage/Supportheader";
+import CommonFooter from "../components/Layout/CommonFooter"
+import FAQS from "../components/SupportPage/FAQS"
+import SupportingCards from "../components/SupportPage/SupportingCards"
 
-function contact() {
+const Home = () => {
   return (
-    <div className="home">
-      <header className="App-header">
-        <h1>Welcome to React</h1>
-        <p>This is your basic React app structure. cohhhhhhhhhhhhntact</p>
-      </header>
-    </div>
-  );
-}
+    <>
+    
+      <Nav />
+      <SupportHeader />
+      <SupportingCards/>
+      
+      <FAQS />
 
-export default contact;
+      <CommonFooter />
+    </>
+  );
+};
+
+export default Home;

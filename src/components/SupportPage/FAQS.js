@@ -4,7 +4,6 @@ import { styled } from '@mui/system';
 import "../../styles/ClearCost.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import instagramIcon from '../../assets/images/Line.svg';
-import PricingCards from "./PricingCards"
 
 const CustomAccordion = styled(Accordion)({
   margin: 0, // Remove default margin
@@ -36,12 +35,7 @@ const ExampleComponent = () => {
     <>
       <RowContainer className='eco-container-cost' pt={10} >
         <RowContainer className='width-heading' noMargin>
-        <h1 className="hero-heading-pricing">Exciting Roadmap Ahead</h1>
-        <h2 className="hero-subheading-pricing">Launching new APIs, SDKs, and features to cover all use cases for the diverse Indian developer ecosystem</h2>
-            <PricingCards/>
-
-          <img src={instagramIcon} alt="Instagram"  className="line-img-pricing"  />
-          <Typography className='eco-heading' pt={5}>Frequently Asked <br /> Questions</Typography>
+                <Typography className='eco-heading' pt={10}>Frequently Asked <br /> Questions</Typography>
           <Typography className='eco-subheading-cost'>
             Got questions? We've already got answers.<br />It's like we can hear you thinking.
           </Typography>

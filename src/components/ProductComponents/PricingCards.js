@@ -11,7 +11,7 @@ import FourthImage from '../../assets/images/location.svg';
 // MapsMenu Component
 const MapsMenu = ({ image, title, menuItems }) => {
   return (
-    <Box className="menu-container">
+    <Box className="menu-container" >
       <Box className="header" mb={7}>
         <img src={image} alt="Icon" className="menu-icon" />
         <Typography variant="h6" className="menu-title">{title}</Typography>

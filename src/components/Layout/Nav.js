@@ -6,7 +6,6 @@ import {
   Toolbar,
   Button,
   Box,
-  Tooltip,
   Typography,
   Menu,
   MenuItem,
@@ -21,13 +20,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import logo from "../../assets/images/Logo.svg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import debounce from 'lodash/debounce'; // Import debounce from lodash
+import debounce from 'lodash/debounce';
 
 function GradientSection() {
   const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down(1279));
   const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorElDeveloper, setAnchorElDeveloper] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const isActiveRoute = (route) => location.pathname === route;
@@ -40,16 +40,25 @@ function GradientSection() {
     setAnchorEl(null);
   };
 
+  const handleDeveloperMenuClick = (event) => {
+    setAnchorElDeveloper(event.currentTarget);
+  };
+
+  const handleDeveloperMenuClose = () => {
+    setAnchorElDeveloper(null);
+  };
+
   const isDeveloperActive = () => {
     return ["/documentation", "/ref"].includes(location.pathname);
   };
 
   const menuOpen = Boolean(anchorEl);
+  const developerMenuOpen = Boolean(anchorElDeveloper);
 
   useEffect(() => {
     const handleScroll = debounce(() => {
       setIsScrolled(window.scrollY > 50);
-    }, 100); // Adjust debounce delay as needed
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -72,11 +81,11 @@ function GradientSection() {
         position="sticky"
         elevation={0}
         sx={{
-          backgroundColor: isScrolled ? "white" : "transparent",
+          backgroundColor: isScrolled ? "white" : "white",
           color: isScrolled ? "black" : "inherit",
           transition: "background-color 0.3s ease",
           top: 0,
-          zIndex: 1200, // Ensure it's on top of other content
+          zIndex: 10,
         }}
         className={`app-bar-height ${isScrolled ? "scrolled" : ""}`}
       >
@@ -129,45 +138,56 @@ function GradientSection() {
                   Downloads
                 </Button>
 
-                <Tooltip
-                  title={
-                    <Box className="tooltip-content">
-                      <Typography
-                        color="inherit"
-                        component={Link}
-                        to="/documentation"
-                        className="button-nav"
-                      >
-                        Documentation
-                      </Typography>
-                      <Typography
-                        color="inherit"
-                        className="button-nav"
-                        component={Link}
-                        to="/ref"
-                      >
-                        API Reference
-                      </Typography>
-                    </Box>
-                  }
-                  arrow
-                  placement="bottom-end"
-                  sx={{ cursor: "pointer" }}
+                <Button
+                  aria-controls={developerMenuOpen ? 'developer-menu' : undefined}
+                  aria-haspopup="true"
+                  onClick={handleDeveloperMenuClick}
+                  style={{
+                    color: isDeveloperActive() ? "#6E00DC" : "inherit",
+                  }}
+                  className="button-nav"
                 >
-                  <Box
-                    className={`menu-box ${
-                      isDeveloperActive() ? "active" : ""
+                  Developer
+                  <ExpandMoreIcon
+                    color="inherit"
+                    className={`developer-icon ${
+                      developerMenuOpen ? "active" : ""
                     }`}
-                  >
-                    <Typography className="button-nav">Developer</Typography>
-                    <ExpandMoreIcon
-                      color="inherit"
-                      className={`developer-icon ${
-                        isDeveloperActive() ? "active" : ""
-                      }`}
-                    />
-                  </Box>
-                </Tooltip>
+                  />
+                </Button>
+     
+      <Box   sx={{ zIndex: '10001!important', }}>
+
+             
+                <Menu
+  id="developer-menu"
+  anchorEl={anchorElDeveloper}
+  open={developerMenuOpen}
+  onClose={handleDeveloperMenuClose}
+  MenuListProps={{
+    'aria-labelledby': 'developer-button',
+  }}
+  PaperProps={{
+  
+  }}
+>
+  <MenuItem
+    component={Link}
+    to="/documentation"
+    onClick={handleDeveloperMenuClose}
+  >
+    Documentation
+  </MenuItem>
+  <MenuItem
+    component={Link}
+    to="/ref"
+    onClick={handleDeveloperMenuClose}
+  >
+    API Reference
+  </MenuItem>
+</Menu>
+</Box>
+
 
                 <Button
                   style={{
