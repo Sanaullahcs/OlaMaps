@@ -184,3 +184,37 @@ padding-top: 0px;
     font-family: "Nunito Sans", sans-serif !important;
 
 }
+
+
+@media (min-width: 1300px) and (max-width: 1550px) {
+.heading-first{
+  font-size: 40px !important;
+  line-height: 50px;
+}
+.heading-sec{
+  font-size: 15px;
+  line-height: 22px;
+
+}
+
+.eco-heading{
+  color: #0A0A0A !important;
+  font-size: 32px !important;
+  line-height: 38px !important;
+}
+.eco-subheading{
+  
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  
+}
+
+.hero-button-eco{
+  width: 170px !important;
+  height: 49px !important;
+  
+  font-size: 15px !important;
+ 
+}
+}
