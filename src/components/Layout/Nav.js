@@ -20,7 +20,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import logo from "../../assets/images/Logo.svg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import debounce from 'lodash/debounce';
+import debounce from "lodash/debounce";
 
 function GradientSection() {
   const location = useLocation();
@@ -79,13 +79,14 @@ function GradientSection() {
       )}
       <AppBar
         position="sticky"
-        elevation={0}
+        elevation={isScrolled ? 4 : 0}
         sx={{
           backgroundColor: isScrolled ? "white" : "white",
           color: isScrolled ? "black" : "inherit",
-          transition: "background-color 0.3s ease",
+          transition: "background-color 0.3s ease, box-shadow 0.3s ease",
           top: 0,
           zIndex: 10,
+          boxShadow: isScrolled ? "0px 4px 6px rgba(0, 0, 0, 0.1)" : "none",
         }}
         className={`app-bar-height ${isScrolled ? "scrolled" : ""}`}
       >
@@ -110,6 +111,7 @@ function GradientSection() {
                 <Button
                   style={{
                     color: isActiveRoute("/products") ? "#6E00DC" : "inherit",
+                    marginLeft: "15px",
                   }}
                   component={Link}
                   to="/products"
@@ -117,9 +119,11 @@ function GradientSection() {
                 >
                   Products
                 </Button>
+
                 <Button
                   style={{
                     color: isActiveRoute("/pricing") ? "#6E00DC" : "inherit",
+                    marginLeft: "15px",
                   }}
                   component={Link}
                   to="/pricing"
@@ -130,6 +134,7 @@ function GradientSection() {
                 <Button
                   style={{
                     color: isActiveRoute("/downloads") ? "#6E00DC" : "inherit",
+                    marginLeft: "15px",
                   }}
                   component={Link}
                   to="/downloads"
@@ -139,11 +144,13 @@ function GradientSection() {
                 </Button>
 
                 <Button
-                  aria-controls={developerMenuOpen ? 'developer-menu' : undefined}
+                  aria-controls={developerMenuOpen ? "developer-menu" : undefined}
                   aria-haspopup="true"
                   onClick={handleDeveloperMenuClick}
                   style={{
                     color: isDeveloperActive() ? "#6E00DC" : "inherit",
+                    marginLeft: "15px",
+                    marginRight: "15px",
                   }}
                   className="button-nav"
                 >
@@ -155,43 +162,38 @@ function GradientSection() {
                     }`}
                   />
                 </Button>
-     
-      <Box   sx={{ zIndex: '10001!important', }}>
 
-             
-                <Menu
-  id="developer-menu"
-  anchorEl={anchorElDeveloper}
-  open={developerMenuOpen}
-  onClose={handleDeveloperMenuClose}
-  MenuListProps={{
-    'aria-labelledby': 'developer-button',
-  }}
-  PaperProps={{
-  
-  }}
->
-  <MenuItem
-    component={Link}
-    to="/documentation"
-    onClick={handleDeveloperMenuClose}
-  >
-    Documentation
-  </MenuItem>
-  <MenuItem
-    component={Link}
-    to="/ref"
-    onClick={handleDeveloperMenuClose}
-  >
-    API Reference
-  </MenuItem>
-</Menu>
-</Box>
-
+                <Box sx={{ zIndex: "10001!important" }}>
+                  <Menu
+                    id="developer-menu"
+                    anchorEl={anchorElDeveloper}
+                    open={developerMenuOpen}
+                    onClose={handleDeveloperMenuClose}
+                    MenuListProps={{
+                      "aria-labelledby": "developer-button",
+                    }}
+                  >
+                    <MenuItem
+                      component={Link}
+                      to="/documentation"
+                      onClick={handleDeveloperMenuClose}
+                    >
+                      Documentation
+                    </MenuItem>
+                    <MenuItem
+                      component={Link}
+                      to="/ref"
+                      onClick={handleDeveloperMenuClose}
+                    >
+                      API Reference
+                    </MenuItem>
+                  </Menu>
+                </Box>
 
                 <Button
                   style={{
                     color: isActiveRoute("/support") ? "#6E00DC" : "inherit",
+                    marginLeft: "1px",
                   }}
                   component={Link}
                   to="/support"
@@ -243,7 +245,12 @@ function GradientSection() {
                     to="/"
                     selected={isActiveRoute("/")}
                     onClick={handleMenuClose}
-                    sx={{ paddingLeft: 2 }}
+                    sx={{
+                      paddingLeft: 3,
+                      paddingRight: 2,
+                      paddingTop: isMobile ? 2 : 1,
+                      paddingBottom: isMobile ? 2 : 1,
+                    }}
                   >
                     Home
                   </MenuItem>
@@ -252,7 +259,12 @@ function GradientSection() {
                     to="/products"
                     selected={isActiveRoute("/products")}
                     onClick={handleMenuClose}
-                    sx={{ paddingLeft: 2 }}
+                    sx={{
+                      paddingLeft: 3,
+                      paddingRight: 2,
+                      paddingTop: isMobile ? 2 : 1,
+                      paddingBottom: isMobile ? 2 : 1,
+                    }}
                   >
                     Products
                   </MenuItem>
@@ -261,7 +273,12 @@ function GradientSection() {
                     to="/pricing"
                     selected={isActiveRoute("/pricing")}
                     onClick={handleMenuClose}
-                    sx={{ paddingLeft: 2 }}
+                    sx={{
+                      paddingLeft: 3,
+                      paddingRight: 2,
+                      paddingTop: isMobile ? 2 : 1,
+                      paddingBottom: isMobile ? 2 : 1,
+                    }}
                   >
                     Pricing
                   </MenuItem>
@@ -270,13 +287,17 @@ function GradientSection() {
                     to="/downloads"
                     selected={isActiveRoute("/downloads")}
                     onClick={handleMenuClose}
-                    sx={{ paddingLeft: 2 }}
+                    sx={{
+                      paddingLeft: 3,
+                      paddingRight: 2,
+                      paddingTop: isMobile ? 2 : 1,
+                      paddingBottom: isMobile ? 2 : 1,
+                    }}
                   >
                     Downloads
                   </MenuItem>
 
                   <Accordion
-                    className="custom-accordion"
                     sx={{
                       boxShadow: "none",
                       "&:before": {
@@ -299,19 +320,31 @@ function GradientSection() {
                         padding: "0",
                       }}
                     >
-                      <Typography>Developer</Typography>
+                      <Typography pl={3}>Developer</Typography>
                       <ExpandMoreIcon
                         color="inherit"
                         className="developer-icon"
                       />
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Box>
+                      <Box
+                        sx={{
+                          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                          borderRadius: "8px",
+                          padding: 2,
+                          backgroundColor: "white",
+                        }}
+                      >
                         <MenuItem
                           component={Link}
                           to="/documentation"
                           onClick={handleMenuClose}
-                          sx={{ paddingLeft: 2 }}
+                          sx={{
+                            paddingLeft: 3,
+                            paddingRight: 2,
+                            paddingTop: isMobile ? 2 : 1,
+                            paddingBottom: isMobile ? 2 : 1,
+                          }}
                         >
                           Documentation
                         </MenuItem>
@@ -319,7 +352,12 @@ function GradientSection() {
                           component={Link}
                           to="/ref"
                           onClick={handleMenuClose}
-                          sx={{ paddingLeft: 2 }}
+                          sx={{
+                            paddingLeft: 3,
+                            paddingRight: 2,
+                            paddingTop: isMobile ? 2 : 1,
+                            paddingBottom: isMobile ? 2 : 1,
+                          }}
                         >
                           API Reference
                         </MenuItem>
@@ -332,13 +370,28 @@ function GradientSection() {
                     to="/support"
                     selected={isActiveRoute("/support")}
                     onClick={handleMenuClose}
-                    sx={{ paddingLeft: 2 }}
+                    sx={{
+                      paddingLeft: 3,
+                      paddingRight: 2,
+                      paddingTop: isMobile ? 2 : 1,
+                      paddingBottom: isMobile ? 2 : 1,
+                    }}
                   >
                     Support
                   </MenuItem>
-                  <Button variant="text" className="right-button">
-                    SignIn
-                  </Button>
+                  <div
+  style={{
+    paddingLeft: 8, 
+    paddingRight: 8,
+    paddingTop: isMobile ? 2 : 1,
+    paddingBottom: 15,
+  }}
+>
+  <Button variant="text" className="right-button">
+    SignIn
+  </Button>
+</div>
+
                 </Menu>
               </>
             )}
