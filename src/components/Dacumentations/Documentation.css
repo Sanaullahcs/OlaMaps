@@ -29,22 +29,31 @@
 .list-item {
   font-family: "Nunito Sans", sans-serif !important;
   padding: 15px;
+  font-size: 23px!important;
+  font-weight: 700!important;
 }
 
 .list-item.active {
   font-family: "Nunito Sans", sans-serif !important;
-  color: purple;
+  padding-top: 40px;
+  font-size: 23px!important;
+  font-weight: 700!important;
+  color: #6E00DC!important;
 }
 
 .accordion {
   font-family: "Nunito Sans", sans-serif !important;
   border: none !important;
   box-shadow: none !important;
+  color: #777777 !important;
+  font-weight: 700 !important;
+
 }
 
 .accordion-item {
   font-family: "Nunito Sans", sans-serif !important;
   padding-left: 32px;
+  color: #000000   !important;
 }
 
 .content-box {
@@ -100,8 +109,8 @@
 .lightTextlist{
  
   font-family: "Nunito Sans", sans-serif !important;
-  color: #555555;
-  font-weight: 500;
+  color: #555555!important;
+  font-weight: 500!important;
 }
 .custom-link {
   color: #555555;

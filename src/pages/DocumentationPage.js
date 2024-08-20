@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../components/Layout/Nav";
+import DocumentationNav from "../components/Dacumentations/DocumentationNav";
 import CommonFooter from "../components/Layout/CommonFooter"
 import Dacumentations from "../components/Dacumentations/overview"
 
@@ -8,7 +8,7 @@ import Dacumentations from "../components/Dacumentations/overview"
 function contact() {
   return ( 
      <>
-     <Nav />
+     <DocumentationNav />
 <Dacumentations />
 
    
