@@ -12,3 +12,41 @@
     margin: 0 auto; 
 
   }
+
+    
+@media (min-width: 1300px) and (max-width: 1550px) {
+  .hero-subheading-support {
+    color: #555555ce;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 20px;
+    text-align: center;
+    text-transform: none !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 800px;
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 auto; 
+
+  }
+  
+  }
+      
+@media (min-width: 300px) and (max-width: 1300px) {
+  .hero-subheading-support {
+    color: #555555ce;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 20px;
+    text-align: center;
+    text-transform: none !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 800px;
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 auto; 
+
+  }
+  
+  }
+  

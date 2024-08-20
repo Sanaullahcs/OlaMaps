@@ -82,3 +82,221 @@
     margin-bottom: 100px !important; /* Adjust the value as needed */
   }
   
+@media (min-width: 1300px) and (max-width: 1550px) {
+ 
+.hero-section-downloads {
+  background-color: #F1F4F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif !important;
+
+}
+.hero-heading-downloads {
+  font-size: 45px !important;
+  line-height: 50px;
+  text-align: center;
+  text-transform: none !important;
+   margin-top: 6% !important;
+   font-family: "Nunito Sans", sans-serif !important;
+
+}
+
+.downloadPage-button {
+  width: 380px !important;
+  height: 40px !important;
+  
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin-top: 13% !important;
+}
+.sdk-width-down{
+  
+  background-color: #F1F4F5;
+
+
+}
+
+
+.custom-card {
+  margin-top: 20px;
+  border-radius: 20px !important;
+  height: 100% !important;
+
+
+}
+
+.custom-card img {
+  margin-bottom: 10px; 
+  margin: 0 auto;
+  width: 96%;
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 30px !important;
+  line-height: 35px !important;
+}
+
+.card-subheading {
+      color: #555555a7 !important;
+      font-size: 17px !important;
+      line-height: 20px !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    
+      max-width: 550px;
+}
+
+.third-card {
+  margin-bottom: 100px !important; /* Adjust the value as needed */
+}
+
+}
+  
+@media (min-width: 600px) and (max-width: 1300px) {
+ 
+  .hero-section-downloads {
+    background-color: #F1F4F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif !important;
+  
+  }
+  .hero-heading-downloads {
+    font-size: 45px !important;
+    line-height: 50px;
+    text-align: center;
+    text-transform: none !important;
+     margin-top: 6% !important;
+     font-family: "Nunito Sans", sans-serif !important;
+  
+  }
+  
+  .downloadPage-button {
+    width: 380px !important;
+    height: 40px !important;
+    
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    margin-top: 13% !important;
+  }
+  .sdk-width-down{
+    
+    background-color: #F1F4F5;
+  
+  
+  }
+  
+  
+  .custom-card {
+    margin-top: 20px;
+    border-radius: 20px !important;
+    height: 100% !important;
+  
+  
+  }
+  
+  .custom-card img {
+    margin-bottom: 10px; 
+    margin: 0 auto;
+    width: 96%;
+    margin-top: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px !important;
+    line-height: 35px !important;
+  }
+  
+  .card-subheading {
+        color: #555555a7 !important;
+        font-size: 15px !important;
+        line-height: 20px !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      
+        max-width: 550px;
+  }
+  
+  .third-card {
+    margin-bottom: 100px !important; /* Adjust the value as needed */
+  }
+  
+  }
+  @media (min-width: 300px) and (max-width: 600px) {
+ 
+    .hero-section-downloads {
+      background-color: #F1F4F5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: "Nunito Sans", sans-serif !important;
+    
+    }
+    .hero-heading-downloads {
+      font-size: 29px !important;
+      line-height: 50px;
+      text-align: center;
+      text-transform: none !important;
+       margin-top: 6% !important;
+       font-family: "Nunito Sans", sans-serif !important;
+    
+    }
+    
+    .downloadPage-button {
+      width: 200px !important;
+      height: 40px !important;
+      
+      font-size: 8px !important;
+      font-weight: 500 !important;
+      margin-top: 13% !important;
+    }
+    .sdk-width-down{
+      
+      background-color: #F1F4F5;
+    
+    
+    }
+    
+    
+    .custom-card {
+      margin-top: 20px;
+      border-radius: 20px !important;
+      height: 100% !important;
+    
+    
+    }
+    
+    .custom-card img {
+      margin-bottom: 10px; 
+      margin: 0 auto;
+      width: 96%;
+      margin-top: 10px;
+    }
+    
+    .card-title {
+      font-size: 20px !important;
+      line-height: 35px !important;
+    }
+    
+    .card-subheading {
+          color: #555555a7 !important;
+          font-size: 15px !important;
+          line-height: 20px !important;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        
+          max-width: 550px;
+    }
+    
+    .third-card {
+      margin-bottom: 100px !important; /* Adjust the value as needed */
+    }
+    
+    }
+    

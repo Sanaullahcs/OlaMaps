@@ -1,9 +1,7 @@
 import React from 'react';
 import "../../styles/SupportPage.css";
 
-import {
-Button
-} from "@mui/material";
+
 const HeroSection = () => {
   
   return (

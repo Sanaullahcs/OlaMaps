@@ -113,7 +113,15 @@ border-radius: 46px !important;
      padding-top: 90px !important;
 
   }
-
+.hero-subheading-coming{
+  font-size: 56px !important;
+  font-weight: 700 !important;
+  line-height: 67px;
+  text-transform: none !important;
+   font-family: "Nunito Sans", sans-serif !important;
+   padding-top: 30px !important;
+   color: #777777 !important;
+}
   
   .hero-subheading-pricing {
     color: #555555ce;
@@ -245,6 +253,7 @@ border-radius: 46px !important;
 box-shadow: 0px 4px 8px 0px #00000026;
 padding: 50px;
 margin-top: 100px;
+height: 70%;
 
 }
 
@@ -291,13 +300,13 @@ margin-top: 100px;
 
 
   .sdk-button-primary {
-    width: 200px !important;
-      height: 59px !important;
+    width: 140px !important;
+    height: 50px !important;
       background-color: #6E00DC !important;
       border-radius: 46px !important;
       color: white !important;
       font-family: "Nunito Sans", sans-serif !important;
-      font-size: 18px !important;
+      font-size: 15px !important;
       font-weight: 500 !important;
       text-transform: capitalize !important;
       margin-left: 10px !important;
@@ -306,15 +315,336 @@ margin-top: 100px;
 
   
   .sdk-button-outline {
-    width: 200px !important;
-      height: 59px !important;
+    width: 140px !important;
+      height: 50px !important;
       background-color: transparent !important;
       border-radius: 46px !important;
       color: #6E00DC !important;
       font-family: "Nunito Sans", sans-serif !important;
-      font-size: 18px !important;
+      font-size: 15px !important;
       font-weight: 500 !important;
       text-transform: capitalize !important;
       border: 1px solid #6E00DC !important;
   }
+
+  .hero-heading-pricing {
+    font-size: 40px !important;
+    line-height: 45px;
+    text-transform: none !important;
+     font-family: "Nunito Sans", sans-serif !important;
+     padding-top: 90px !important;
+
+  }
+
+  
+  .hero-subheading-pricing {
+    color: #555555ce;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 22px;
+    text-transform: none !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 600px;
+
+
+  }
+
+  .hero-subheading-coming{
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 40px;
+   
+  }
+  .menu-title {
+    font-size: 25px !important;
+    line-height: 30px !important; 
+
+  }
+  
+  .menu-text {
+    font-size: 18px !important;
+    line-height: 23.8px;
+
+      }
+
+      .chip-api {
+     
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+
+      }
+        
+  .chip-sdk {
+     
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+    
+  }
+  
+}
+
+@media (min-width: 500px) and (max-width: 1300px) {
+
+
+  .hero-heading-pricing {
+    font-size: 35px !important;
+    font-weight: 700 !important;
+    line-height: 40px;
+    text-transform: none !important;
+     font-family: "Nunito Sans", sans-serif !important;
+     padding-top: 100px !important;
+
+  }
+
+  
+  .hero-subheading-pricing {
+    color: #555555bd;
+    font-size: 15px !important;
+    line-height: 22px;
+    max-width: 500px;
+
+
+  }
+  .sdk-card-heading {
+    color: black !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 25px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    text-decoration: none !important;
+  }
+  .sdk-card-subheading {
+    color: #555555 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    text-decoration: none !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    max-width: 350px;
+  }
+
+
+  .sdk-button-primary {
+    width: 140px !important;
+    height: 50px !important;
+      background-color: #6E00DC !important;
+      border-radius: 46px !important;
+      color: white !important;
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      text-transform: capitalize !important;
+      margin-left: 10px !important;
+      border: 1px solid #6E00DC !important;
+  }
+
+  
+  .sdk-button-outline {
+    width: 140px !important;
+      height: 50px !important;
+      background-color: transparent !important;
+      border-radius: 46px !important;
+      color: #6E00DC !important;
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      text-transform: capitalize !important;
+      border: 1px solid #6E00DC !important;
+  }
+
+  .hero-heading-pricing {
+    font-size: 40px !important;
+    line-height: 45px;
+    text-transform: none !important;
+     font-family: "Nunito Sans", sans-serif !important;
+     padding-top: 90px !important;
+
+  }
+
+  
+  .hero-subheading-pricing {
+    color: #555555ce;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 22px;
+    text-transform: none !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    max-width: 600px;
+
+
+  }
+
+  .hero-subheading-coming{
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 40px;
+   
+  }
+  .menu-title {
+    font-size: 25px !important;
+    line-height: 30px !important; 
+
+  }
+  
+  .menu-text {
+    font-size: 18px !important;
+    line-height: 23.8px;
+
+      }
+
+      .chip-api {
+     
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+
+      }
+        
+  .chip-sdk {
+     
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+    
+  }
+
+  .sdk-width{
+    width: 95% !important;
+    margin: 0 auto;
+  
+  }
+  .width-heading{
+    width: 95%;
+    margin: 0 auto;
+}
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .sdk-link {
+
+    font-size: 15px;
+  
+  
+  }
+  
+
+  .hero-heading-pricing {
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    line-height: 30px;
+    text-transform: none !important;
+     font-family: "Nunito Sans", sans-serif !important;
+     padding-top: 50px !important;
+
+  }
+
+  
+  .hero-subheading-pricing {
+    color: #555555bd;
+    font-size: 13px !important;
+    line-height: 18px;
+    max-width: 500px;
+
+
+  }
+  .sdk-card-heading {
+    color: black !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 25px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    text-decoration: none !important;
+  }
+  .sdk-card-subheading {
+    color: #555555 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    text-decoration: none !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    max-width: 350px;
+  }
+
+
+  .sdk-button-primary {
+    width: 140px !important;
+    height: 50px !important;
+      background-color: #6E00DC !important;
+      border-radius: 46px !important;
+      color: white !important;
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      text-transform: capitalize !important;
+      margin-left: 10px !important;
+      border: 1px solid #6E00DC !important;
+  }
+
+  
+  .sdk-button-outline {
+    width: 140px !important;
+      height: 50px !important;
+      background-color: transparent !important;
+      border-radius: 46px !important;
+      color: #6E00DC !important;
+      font-family: "Nunito Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      text-transform: capitalize !important;
+      border: 1px solid #6E00DC !important;
+  }
+
+
+  
+  
+
+  .hero-subheading-coming{
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 40px;
+   
+  }
+  .menu-title {
+    font-size: 18px !important;
+    line-height: 20px !important; 
+
+  }
+  
+  .menu-text {
+    font-size: 15px !important;
+    line-height: 18px;
+
+      }
+
+      .chip-api {
+     
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+
+      }
+        
+  .chip-sdk {
+     
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 20.28px !important;
+    
+  }
+
+  .sdk-width{
+    width: 95% !important;
+    margin: 0 auto;
+  
+  }
+  .width-heading{
+    width: 95%;
+    margin: 0 auto;
+}
 }

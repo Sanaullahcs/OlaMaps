@@ -38,6 +38,7 @@ const ExampleComponent = () => {
         <RowContainer className='width-heading' noMargin>
         <h1 className="hero-heading-pricing">Exciting Roadmap Ahead</h1>
         <h2 className="hero-subheading-pricing">Launching new APIs, SDKs, and features to cover all use cases for the diverse Indian developer ecosystem</h2>
+        <p className="hero-subheading-coming">Coming Soon</p>
             <PricingCards/>
 
           <img src={instagramIcon} alt="Instagram"  className="line-img-pricing"  />
