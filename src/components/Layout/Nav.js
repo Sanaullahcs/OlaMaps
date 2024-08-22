@@ -74,7 +74,7 @@ function GradientSection() {
       {isActiveRoute("/") && !isScrolled && (
         <div className="gradient-section">
           <h1 className="gradient-heading">
-            It's time to #ExitGoogleMaps, Switch to Fribe
+            It's Time to #ExitGoogleMaps, Switch to Fribe
           </h1>
           <Button className="gradient-button">Get 1 year free access</Button>
         </div>
@@ -175,13 +175,13 @@ function GradientSection() {
                       "aria-labelledby": "developer-button",
                     }}
                   >
-                    <MenuItem
+                    {/* <MenuItem
                       component={Link}
                       to="/documentation"
                       onClick={handleDeveloperMenuClose}
                     >
                       Documentation
-                    </MenuItem>
+                    </MenuItem> */}
                     <MenuItem
                       component={Link}
                       to="/ref"

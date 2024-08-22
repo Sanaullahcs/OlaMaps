@@ -5,6 +5,7 @@ import "../../styles/ClearCost.css";
 import homeMap from "../../assets/images/costHome.png";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import instagramIcon from '../../assets/images/Line.svg';
+import { useNavigate } from 'react-router-dom';
 
 const CustomAccordion = styled(Accordion)({
   margin: 0, // Remove default margin
@@ -25,6 +26,11 @@ const RowContainer = styled('div')(({ noMargin }) => ({
 }));
 
 const ExampleComponent = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/pricing');
+  };
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange =
@@ -47,7 +53,8 @@ const ExampleComponent = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Button variant="text" className='right-button-cost'>
+                <Button variant="text" className='right-button-cost'       onClick={handleClick}
+                >
                   View Pricing
                 </Button>
               </Grid>
@@ -154,11 +161,11 @@ const ExampleComponent = () => {
       </div>
       </RowContainer>
 <RowContainer  className='padding-clear'>
-<Typography className='eco-heading'>Clear Costs, Smart<br /> Routes</Typography>
+<Typography className='eco-heading'>Precision Navigation Excellence <br></br> with Fribe.</Typography>
                 <Typography className='eco-subheading-cost'>
-                  Enjoy 2 years of complimentary access with up to 10 million API calls for long-term commitments. After initial 2 years, costs will apply. Start saving today and unlock effortless navigation.
-                </Typography>
-                <Button variant="text" className='right-button-cost'>
+                Join us in revolutionizing the way India navigates with Fribe. Our platform is designed to provide accurate, real-time, and contextually relevant navigation services tailored for the dynamic Indian road conditions.                </Typography>
+                <Button variant="text" className='right-button-cost'       onClick={handleClick}
+                >
                   View Pricing
                 </Button>
 </RowContainer>

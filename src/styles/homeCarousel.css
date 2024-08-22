@@ -27,15 +27,18 @@
 }
 
 .slider-container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: absolute;
     margin-top: 100px;
 }
+.gamer-container{
+  width: 95%;
+  margin: 0 auto;
 
+}
 .slider-container .slider-image {
     width: 100%;
-    height: auto;
     object-fit: cover;
 }
 
@@ -92,7 +95,7 @@ font-family: "Nunito Sans", sans-serif !important;
 
   } 
 .eco-container{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     background-color: #F5F5F5;
     border-radius: 20px;
@@ -153,13 +156,13 @@ padding-top: 0px;
   }
 
   .eco-container-sec{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     background-color: #F5F5F5;
     border-radius: 20px;
 }
 .eco-container-third{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 
 }
@@ -174,7 +177,7 @@ padding-top: 0px;
 }
 
 .width-heading{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
 .eco-heading{
@@ -289,7 +292,7 @@ padding-top: 0px;
     }
   
     .padding{
-      padding: 130px 0px 0px 50px;
+      padding: 130px 0px 0px 50px !important;
     }
 
     .eco-image-first{

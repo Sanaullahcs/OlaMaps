@@ -67,3 +67,23 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+@media (max-width: 1550px) {
+  .footer-links .footer-link {
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 30px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    
+  }
+
+  .copyright-heading {
+    color: rgba(255, 255, 255, 0.711) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 28px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+}

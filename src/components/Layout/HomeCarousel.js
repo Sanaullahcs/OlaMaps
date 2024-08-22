@@ -36,7 +36,8 @@ const ResponsiveRow = () => {
   const isMdDown = useMediaQuery(theme.breakpoints.down('md')); // Use media query for medium screens
 
   return (
-    <Grid container spacing={2} justifyContent={isSmDown ? 'center' : 'flex-start'}>
+   <div className="gamer-container ">  
+     <Grid container spacing={2} justifyContent={isSmDown ? 'center' : 'flex-start'}>
       {items.map((item, index) => (
         <Grid item xs={6} sm={6} md={3} key={index}>
           <Box 
@@ -84,6 +85,7 @@ const ResponsiveRow = () => {
         </Grid>
       ))}
     </Grid>
+   </div>
   );
 };
 

@@ -268,10 +268,17 @@ opacity: 0px;
     /* More specific */
     font-size: 19px;
     line-height: 24.8px;
+  } .button-nav {
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 24.55px;
+    text-align: center;
+    text-transform: none !important;
   }
   .gradient-button{
-      width: 240px;
-      height: 59px;
+      width: 220px !important;
+      height: 50px !important;
       padding: 16px 30px 16px 30px !important;
       border-radius: 46px !important;
       color: #7f1fdf !important;
@@ -282,7 +289,10 @@ opacity: 0px;
       text-transform: none !important;
       margin-right: 30px !important;
     
+  }.developer-icon {
+    font-size: 15px !important;
   }
+  
 
   .hero-subheading {
     color: #555555ce;
@@ -329,6 +339,17 @@ opacity: 0px;
   }
   
 
+  .right-button {
+    width: 95px !important;
+  height: 59px !important;
+  background-color: #6E00DC !important;
+  border-radius: 46px !important;
+  color: white !important;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  }
+  
 }
 
 @media (min-width: 500px) and (max-width: 1300px) {
@@ -358,8 +379,18 @@ opacity: 0px;
   }
 
  
-
-
+  .button-nav {
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 24.55px;
+    text-align: center;
+    text-transform: none !important;
+  }
+  .developer-icon {
+    font-size: 15px !important;
+  }
+  
 }
 
 @media (min-width: 300px) and (max-width: 500px) {
@@ -388,13 +419,31 @@ opacity: 0px;
     
   }
 
-
+  .button-nav {
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 24.55px;
+    text-align: center;
+    text-transform: none !important;
+  }
   .logo{
     width: 100px !important;
    }
 }
 
+.right-button {
+  width: 100px !important;
+height: 45px !important;
+background-color: #6E00DC !important;
+border-radius: 46px !important;
+color: white !important;
+font-family: "Nunito Sans", sans-serif !important;
+font-size: 15px !important;
+font-weight: 500 !important;
+text-transform: capitalize !important;
 
+}
 
 @media (min-width: 500px) and (max-width: 700px) {
 
