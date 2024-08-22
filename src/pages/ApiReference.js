@@ -2,6 +2,7 @@ import React from "react";
 import DocumentationNav from "../components/Dacumentations/DocumentationNav";
 import CommonFooter from "../components/Layout/CommonFooter"
 import MiddleContent from "../components/ApiReference/layout"
+import { Helmet } from "react-helmet";
 
 
 
@@ -9,6 +10,9 @@ import MiddleContent from "../components/ApiReference/layout"
 function contact() {
   return ( 
      <>
+      <Helmet>
+        <title>Api Reference</title>
+      </Helmet>
      <DocumentationNav />
 <MiddleContent />
 

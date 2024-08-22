@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Container, Grid, Link, Typography, IconButton } from '@mui/material';
+import { Box, Container, Grid, Link as MuiLink, Typography, IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 import "../../styles/Footer.css";
 import logo from "../../assets/images/FooterLogo.svg";
 
@@ -7,6 +8,10 @@ import logo from "../../assets/images/FooterLogo.svg";
 import facebookIcon from '../../assets/images/Facebook.svg';
 import twitterIcon from '../../assets/images/Twitter.svg';
 import instagramIcon from '../../assets/images/Instagram.svg';
+
+const handleGetStartedClick = () => {
+  window.location.href = "https://dashboard.fribe.io/sign-in";
+};
 
 const Footer = () => {
   return (
@@ -20,10 +25,11 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={12} md={8} className="footer-links" mt={2}>
             <Grid container justifyContent="center">
-              <Link href="#" className="footer-link">Get in Touch</Link>
-              <Link href="#" className="footer-link" style={{ marginLeft: '30px' }}>Privacy Policy</Link>
-              <Link href="#" className="footer-link" style={{ marginLeft: '30px' }}>Terms and Conditions</Link>
-              <Link href="#" className="footer-link" style={{ marginLeft: '30px' }}>Cookie Policy</Link>
+              <MuiLink  className="footer-link" onClick={handleGetStartedClick}>Get in Touch</MuiLink>
+              <Link to="/privacy-policy" className="footer-link" style={{ marginLeft: '30px' }}>Privacy Policy</Link>
+              <MuiLink href="/terms-conditions" className="footer-link" style={{ marginLeft: '30px' }}>Terms and Conditions</MuiLink>
+              <MuiLink href="/documentation" className="footer-link" style={{ marginLeft: '30px' }}>Api Documentation</MuiLink>
+              <MuiLink href="/products" className="footer-link" style={{ marginLeft: '30px' }}>Products</MuiLink>
             </Grid>
           </Grid>
           <Grid item xs={12} sm={12} md={2} className="footer-links">

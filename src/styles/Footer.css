@@ -1,7 +1,4 @@
- 
- @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
- .footer {
+.footer {
   background-color: #2C0157; /* Adjust to match your design */
   padding: 30px 0;
 }
@@ -14,16 +11,20 @@
   text-align: center;
 }
 
-.footer-link {
+.footer-links .footer-link {
   color: white !important;
   font-size: 20px !important;
   font-weight: 600 !important;
   line-height: 30px !important;
   font-family: "Nunito Sans", sans-serif !important;
   text-decoration: none !important;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  
 }
 
-
+.footer-links .footer-link:hover {
+  color: #6E00DC !important; /* Hover color */
+}
 
 .footer-icons {
   margin-top: 20px;
@@ -45,24 +46,24 @@
 }
 
 .social-icon {
-    opacity: 0.7; /* Adjust the opacity value as needed */
-    transition: opacity 0.3s ease; /* Optional: Smooth transition for hover effect */
-  }
-  
-  .social-icon:hover {
-    opacity: 1; /* Optional: Full opacity on hover */
-  }
+  opacity: 0.7; /* Adjust the opacity value as needed */
+  transition: opacity 0.3s ease; /* Optional: Smooth transition for hover effect */
+}
 
-  .copyright-heading{
-    color: rgba(255, 255, 255, 0.711) !important;
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    line-height: 28px !important;
-    font-family: "Nunito Sans", sans-serif !important;
-  }
+.social-icon:hover {
+  opacity: 1; /* Optional: Full opacity on hover */
+}
 
-  .line-img{
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+.copyright-heading {
+  color: rgba(255, 255, 255, 0.711) !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 28px !important;
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+.line-img {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

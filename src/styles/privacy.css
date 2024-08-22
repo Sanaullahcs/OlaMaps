@@ -1,0 +1,83 @@
+/* Container for the entire privacy policy section */
+.privacy-policy-container {
+    background-color: #ffffff;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  
+  /* Title of the privacy policy page */
+  .privacy-policy-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700 !important;
+    font-size: 44px !important;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+  
+  /* Subtitle for sections like "Introduction", "Your Account", "Our Services" */
+  .privacy-policy-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600 !important;
+    font-size: 28px !important;
+    color: #333333e0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Main content styling for paragraphs */
+  .privacy-policy-content {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px !important;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  /* Strong tag inside the content to highlight bold text */
+  .privacy-policy-content strong {
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  /* Margin adjustments to space out sections nicely */
+  .privacy-policy-content:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 300px) and (max-width: 600px) {
+    .privacy-policy-container {
+      background-color: #ffffff;
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+    }
+    
+    /* Title of the privacy policy page */
+    .privacy-policy-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700 !important;
+      font-size: 30px !important;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 40px;
+    }
+    
+    /* Subtitle for sections like "Introduction", "Your Account", "Our Services" */
+    .privacy-policy-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      color: #333333e0;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    
+    /* Main content styling for paragraphs */
+    .privacy-policy-content {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px !important;
+      line-height: 1.7;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+    
+  }
