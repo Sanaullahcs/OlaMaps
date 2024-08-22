@@ -66,7 +66,9 @@ function GradientSection() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const handleGetStartedClick = () => {
+    window.location.href = "https://dashboard.fribe.io/sign-in";
+  };
   return (
     <>
       {isActiveRoute("/") && !isScrolled && (
@@ -207,7 +209,7 @@ function GradientSection() {
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {!isMobile && (
-              <Button variant="text" className="right-button">
+              <Button variant="text" className="right-button" onClick={handleGetStartedClick}>
                 SignIn
               </Button>
             )}

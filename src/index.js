@@ -10,6 +10,8 @@ import Downloads from "./pages/DownloadsPage";
 import Documentation from "./pages/DocumentationPage";
 import ApiReference from "./pages/ApiReference";
 import Support from "./pages/SupportPage";
+import Privacy from "./pages/PrivacyPolicy"
+import Terms from "./pages/TermandConditions"
 
 const theme = createTheme({});
 
@@ -25,6 +27,9 @@ const router = createBrowserRouter([
       { path: "documentation", element: <Documentation /> },
       { path: "ref", element: <ApiReference /> },
       { path: "support", element: <Support /> },
+      {path: "privacy-policy", element: <Privacy />},
+      {path: "terms-conditions", element: < Terms />}
+
     ],
   },
 ]);
