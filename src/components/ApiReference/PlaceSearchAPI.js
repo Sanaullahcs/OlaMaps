@@ -8,7 +8,7 @@ const FribeMapService = () => {
       <Typography className='HeaderResposive-Doc' variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.2 }}>
         Fribe Map Service
       </Typography>
-      <Typography variant="h5" component="h2" gutterBottom sx={{ lineHeight: 1.4 }}>
+      <Typography variant="h4" component="h2" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Place Search Api
       </Typography>
 
@@ -51,11 +51,11 @@ const FribeMapService = () => {
     mb: { xs: 1, sm: 0 },
     input: {
       fontSize: { xs: '12px', sm: '14px' },
-      color: '#333',  // Adjust font color
-      fontWeight: 'bold',  // Match font weight
-      border: 'none',  // Explicitly set border to none
-      padding: '0',  // Remove any padding to ensure inline appearance
-      cursor: 'pointer',  // Add cursor pointer for better UX
+      color: '#0709cd',
+      fontWeight: 500, 
+      border: 'none',  
+      padding: '0',  
+      cursor: 'pointer', 
     },
   }}
   onClick={(e) => {
@@ -83,76 +83,17 @@ const FribeMapService = () => {
 </Box>
 </Box>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        The Place API gets the text string which you need to filter in api and returns you country, city, formatted address with latitude and longitude under usual circumstances.
+      The Place API gets the text string which you need to filter in api and returned you country, city , formatted address with latitude and longitude under usual circumstances.
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Place API service can take input using HTTPS GET request. Request URL required parameters are{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box>.{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> is string type and used for search records while{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> is mandatory for received data against{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> string. You can get your{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> after login/signup. Let's go to GET request which we are covering as example in given below.
+      Place API service can take input using HTTPS GET request. Request URL required parameters are search and publishableKey. search is string type and use for search records while publishableKey is mandatory for received data against search string. you can get your publishableKey after login/signup.
+      let's go to GET request which we are covering as example in given below.
+      </Typography>
+      <Typography variant="h5" component="h2" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
+      GET Request
+      </Typography>
+      <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
+      To utilize the Places API and obtain information, a GET request is made with the required parameters: search, publishableKey.
       </Typography>
       <Typography variant="h6" gutterBottom sx={{ lineHeight: 1.2, mt: 4 }}>
         Request Parameters
@@ -196,35 +137,15 @@ const FribeMapService = () => {
         </Table>
       </TableContainer>
       {/* GET Request Example 1 */}
-      <Typography className='HeaderResposive-Doc'  variant="h4" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 4 }}>
+      <Typography className='HeaderResposive-Doc'  variant="h5" component="h3" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         GET Request Example 1
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Let's look at a simple place request with a{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> pair for a being made by a place in the response.
+      Let’s look at a simple place request with
+
+a search and publishableKey pair for a being made by a place in the response
       </Typography>
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Request
       </Typography>
       <Box 
@@ -244,7 +165,7 @@ const FribeMapService = () => {
         </Typography>
       </Box>
 
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Response
       </Typography>
 
@@ -302,35 +223,15 @@ const FribeMapService = () => {
       </Box>
 
       {/* GET Request Example 2 */}
-      <Typography className='HeaderResposive-Doc'  variant="h4" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 4 }}>
+      <Typography className='HeaderResposive-Doc'  variant="h5" component="h3" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         GET Request Example 2
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Taking the next step to use further features offered in Places API. For the same{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box>, let's request another place search.
+      Taking the next step to use further features offered in Places API. For the same search and publishableKey. Let's request:
+
+a search to be added in the request along with publishableKey information
       </Typography>
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Request
       </Typography>
       <Box 
@@ -349,7 +250,7 @@ const FribeMapService = () => {
         </Typography>
       </Box>
 
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom  sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Response
       </Typography>
 
