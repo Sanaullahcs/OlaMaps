@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { Box, List, ListItem, ListItemText } from '@mui/material';
-import './layout.css'; // Importing the CSS file
+import { Box, List, ListItem, ListItemText, Grid } from '@mui/material';
+import './layout.css';
 
+// Importing the components dynamically
 import APIReference from './APIReferenceComp';
 import DocsRouting from './DocsRouting';
 import APIsPlaces from './APIsPlaces';
 import MapTiles from './MapTiles';
+import PlaceSearchAPI from './PlaceSearchAPI';
+import SearchPlaceDetailAPI from './SearchPlaceDetailAPI';
+import DirectionAPI from './DirectionAPI';
+import DistanceAPI from './DistanceAPI';
+import NearbySearchAPI from './NearbySearchAPI';
 
 const Documentation = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -14,68 +20,62 @@ const Documentation = () => {
     setSelectedIndex(index);
   };
 
-  // Function to render the selected component
-  const renderContent = () => {
-    switch (selectedIndex) {
-      case 0:
-        return <APIReference />;
-      case 1:
-        return <DocsRouting />;
-      case 2:
-        return <APIsPlaces />;
-      case 3:
-        return <MapTiles />;
-      default:
-        return <APIReference />;
-    }
-  };
+  // Components array to map the selected index
+  const components = [
+    <APIReference />,
+    <PlaceSearchAPI />,
+    <SearchPlaceDetailAPI />,
+    <DirectionAPI />,
+    <DistanceAPI />,
+    <NearbySearchAPI />,
+    // <DocsRouting />,
+    // <APIsPlaces />,
+    // <MapTiles />,
+   
+    
+  ];
 
   return (
     <Box display="flex" className="main-container">
       {/* Sidebar */}
-      <Box className="sidebar">
-        <Box className="sidebar-box">
-          <List>
-            <ListItem
-              button
-              selected={selectedIndex === 0}
-              onClick={() => handleListItemClick(0)}
-              className={`list-item ${selectedIndex === 0 ? 'selected' : ''}`}
-            >
-              <ListItemText sx={{borderBottom:'1px solid #00000024',paddingBottom:'20px'}} primary="API Reference" />
-            </ListItem>
-            <ListItem
-              button
-              selected={selectedIndex === 1}
-              onClick={() => handleListItemClick(1)}
-              className={`list-item ${selectedIndex === 1 ? 'selected' : ''}`}
-            >
-              <ListItemText primary="Docs Routing" />
-            </ListItem>
-            <ListItem
-              button
-              selected={selectedIndex === 2}
-              onClick={() => handleListItemClick(2)}
-              className={`list-item ${selectedIndex === 2 ? 'selected' : ''}`}
-            >
-              <ListItemText primary="APIs Places" />
-            </ListItem>
-            <ListItem
-              button
-              selected={selectedIndex === 3}
-              onClick={() => handleListItemClick(3)}
-              className={`list-item ${selectedIndex === 3 ? 'selected' : ''}`}
-            >
-              <ListItemText primary="Map Tiles" />
-            </ListItem>
-          </List>
-        </Box>
-      </Box>
-      
-      {/* Content Box */}
-      <Box className="content-box">
-        {renderContent()}
-      </Box>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={4} className="sidebar-box ">
+          <Box className=" responsive-sidebox">
+            <List>
+              {[
+                'API Reference',
+                'Place Search API',
+                'Search Place Detail API',
+                'Direction API',
+                'Distance API',
+                'Nearby Search API',
+                // 'Docs Routing',
+                // 'APIs Places',
+                // 'Map Tiles',
+              
+              
+              ].map((text, index) => (
+                <ListItem
+                  key={index}
+                  button
+                  selected={selectedIndex === index}
+                  onClick={() => handleListItemClick(index)}
+                  className={`list-item ${selectedIndex === index ? 'selected' : ''}`}
+                  id={`list-item-${index}`} // Unique ID for each item
+                >
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={8}>
+          {/* Content Box */}
+          <Box className="content-box">
+            {components[selectedIndex]}
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

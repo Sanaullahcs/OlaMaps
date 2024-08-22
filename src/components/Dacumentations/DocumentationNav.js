@@ -173,13 +173,13 @@ function GradientSection() {
                       "aria-labelledby": "developer-button",
                     }}
                   >
-                    <MenuItem
+                    {/* <MenuItem
                       component={Link}
                       to="/documentation"
                       onClick={handleDeveloperMenuClose}
                     >
                       Documentation
-                    </MenuItem>
+                    </MenuItem> */}
                     <MenuItem
                       component={Link}
                       to="/ref"
