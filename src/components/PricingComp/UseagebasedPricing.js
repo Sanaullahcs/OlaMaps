@@ -13,12 +13,50 @@ const marks = [
   { value: 5000000, label: '5M' },
   { value: 10000000, label: '10M' },
 ];
+const marks1 = [
+  { value: 0, label: '0' },
+  { value: 500000, label: '100k' },
+  { value: 1300000, label: '500k' },
+  { value: 2000000, label: '2M' },
+  { value: 5000000, label: '5M' },
+  { value: 10000000, label: '10M' },
+];
+const marks2 = [
+  { value: 0, label: '0' },
+  { value: 500000, label: '100k' },
+  { value: 1300000, label: '500k' },
+  { value: 2000000, label: '2M' },
+  { value: 5000000, label: '5M' },
+  { value: 10000000, label: '10M' },
+];
+const marks3 = [
+  { value: 0, label: '0' },
+  { value: 500000, label: '100k' },
+  { value: 1300000, label: '500k' },
+  { value: 2000000, label: '2M' },
+  { value: 5000000, label: '5M' },
+  { value: 10000000, label: '10M' },
+];
+
 
 const PricingTableExactUI = () => {
   const [value, setValue] = useState(0);
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
+  const [value3, setValue3] = useState(0);
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const handleChange1 = (event, newValue1) => {
+    setValue1(newValue1);
+  };
+  const handleChange2 = (event, newValue2) => {
+    setValue2(newValue2);
+  };
+  const handleChange3 = (event, newValue3) => {
+    setValue3(newValue3);
   };
 
   return (
@@ -219,10 +257,10 @@ const PricingTableExactUI = () => {
                     </Box>
                     <Box display="flex" alignItems="center" sx={{ marginBottom:'20px'}}>
                       <Slider
-                        value={value}
-                        onChange={handleChange}
+                        value={value1}
+                        onChange={handleChange1}
                         step={null}
-                        marks={marks}
+                        marks={marks1}
                         min={0}
                         max={10000000}
                         sx={{
@@ -335,10 +373,10 @@ const PricingTableExactUI = () => {
                     </Box>
                     <Box display="flex" alignItems="center" sx={{ marginBottom:'20px'}}>
                       <Slider
-                        value={value}
-                        onChange={handleChange}
+                        value={value2}
+                        onChange={handleChange2}
                         step={null}
-                        marks={marks}
+                        marks={marks2}
                         min={0}
                         max={10000000}
                         sx={{
@@ -451,10 +489,10 @@ const PricingTableExactUI = () => {
                     </Box>
                     <Box display="flex" alignItems="center" sx={{ marginBottom:'20px'}}>
                       <Slider
-                        value={value}
-                        onChange={handleChange}
+                        value={value3}
+                        onChange={handleChange3}
                         step={null}
-                        marks={marks}
+                        marks={marks3}
                         min={0}
                         max={10000000}
                         sx={{

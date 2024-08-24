@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, List, ListItem, ListItemText, Grid } from '@mui/material';
+import { Box, List, ListItem, ListItemText, Grid, Typography, Divider  } from '@mui/material';
 import './layout.css';
 
 // Importing the components dynamically
@@ -22,7 +22,6 @@ const Documentation = () => {
 
   // Components array to map the selected index
   const components = [
-    <APIReference />,
     <PlaceSearchAPI />,
     <SearchPlaceDetailAPI />,
     <DirectionAPI />,
@@ -41,9 +40,14 @@ const Documentation = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} md={4} className="sidebar-box ">
           <Box className=" responsive-sidebox">
+            <Box sx={{ padding:'12px 12px 0px 12px' }}>
+          <Typography sx={{fontSize:'20px', color: '#6E00DC', fontWeight: '500' ,paddingBottom:'10px' ,}}>
+        API Reference
+      </Typography>
+      <Divider sx={{ marginTop: '8px', borderColor: '#0000002b' }} />
+      </Box>
             <List>
               {[
-                'API Reference',
                 'Place Search API',
                 'Search Place Detail API',
                 'Direction API',

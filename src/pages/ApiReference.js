@@ -1,9 +1,9 @@
 import React from "react";
-import DocumentationNav from "../components/Dacumentations/DocumentationNav";
+// import DocumentationNav from "../components/Dacumentations/DocumentationNav";
 import CommonFooter from "../components/Layout/CommonFooter"
 import MiddleContent from "../components/ApiReference/layout"
 import { Helmet } from "react-helmet";
-
+import Nav from "../components/Layout/Nav";
 
 
 
@@ -12,8 +12,9 @@ function contact() {
      <>
       <Helmet>
         <title>Api Reference</title>
-      </Helmet>
-     <DocumentationNav />
+      </Helmet>    
+      <Nav />
+     {/* <DocumentationNav /> */}
 <MiddleContent />
 
    

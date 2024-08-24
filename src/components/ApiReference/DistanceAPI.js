@@ -5,11 +5,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 const FribeMapService = () => {
   return (
     <Container sx={{ mt: 4, px: 2 }}>
-      <Typography className='HeaderResposive-Doc' variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.2 }}>
-        Fribe Map Service
-      </Typography>
-      <Typography variant="h5" component="h2" gutterBottom sx={{ lineHeight: 1.4 }}>
-        Place Search Api
+      <Typography variant="h4" component="h2" gutterBottom sx={{ lineHeight: 1.4 }}>
+      Distance API
       </Typography>
 
       <Box 
@@ -41,7 +38,7 @@ const FribeMapService = () => {
 </Box>
 <TextField
   variant="standard"  // Changed from 'outlined' to 'standard' for inline appearance
-  value="https://maps.fribe.io/api/user/place/textsearch?search={value}&publishableKey={key}"
+  value="https://maps.fribe.io/api/user/place/distance?origin_latlng=57.535793%2C22.376252&destination_latlg=57.535236%2C22.376083&publishableKey=01H48MDA0BSW67C8NGYP7S8B9R&annotations=distance,duration"
   fullWidth
   InputProps={{
     readOnly: true,
@@ -51,11 +48,11 @@ const FribeMapService = () => {
     mb: { xs: 1, sm: 0 },
     input: {
       fontSize: { xs: '12px', sm: '14px' },
-      color: '#333',  // Adjust font color
-      fontWeight: 'bold',  // Match font weight
-      border: 'none',  // Explicitly set border to none
-      padding: '0',  // Remove any padding to ensure inline appearance
-      cursor: 'pointer',  // Add cursor pointer for better UX
+      color: '#0709cd',
+      fontWeight: 500, 
+      border: 'none',  
+      padding: '0',  
+      cursor: 'pointer', 
     },
   }}
   onClick={(e) => {
@@ -76,115 +73,122 @@ const FribeMapService = () => {
     minWidth: '60px', 
   }}
   onClick={() => {
-    navigator.clipboard.writeText("https://maps.fribe.io/api/user/place/textsearch?search={value}&publishableKey={key}");
+    navigator.clipboard.writeText("https://maps.fribe.io/api/user/place/distance?origin_latlng=57.535793%2C22.376252&destination_latlg=57.535236%2C22.376083&publishableKey=01H48MDA0BSW67C8NGYP7S8B9R&annotations=distance,duration");
   }}
 >
   <ContentCopyIcon sx={{ fontSize: '18px' }} />
 </Box>
 </Box>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        The Place API gets the text string which you need to filter in api and returns you country, city, formatted address with latitude and longitude under usual circumstances.
+      The Distance API is used for fetch correct Distance from API.
       </Typography>
+
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Place API service can take input using HTTPS GET request. Request URL required parameters are{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box>.{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> is string type and used for search records while{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> is mandatory for received data against{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> string. You can get your{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> after login/signup. Let's go to GET request which we are covering as example in given below.
+To use the Distance API service please set the Base_URL https://maps.fribe.io/api/user/place/ directions.
+</Typography>
+
+<Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
+Send origin_latlng and destination_latlg combination of latitude and longitude
+</Typography>
+
+
+
+<Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
+Send "⁠annotations = distance,duration" to get steps data in response.
+</Typography>
+
+<Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
+Send publishableKey to authenticate your request.
+        </Typography>
+
+      {/* Title */}
+      <Typography variant="h5" component="h2" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
+        GET Request
+      </Typography>
+
+      {/* Paragraph with highlighted parameters */}
+      <Typography variant="body1" paragraph>
+      To utilize the Distance API and obtain information, a GET request is made with the required parameters: origin_latlng, destination_latlg, publishableKey and annotations.
+      </Typography>
+      <Typography variant="h5" component="h2" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
+      Request Parameters
+      </Typography>
+      <TableContainer component={Paper}>
+  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableHead sx={{ bgcolor: '#6a0dad' }}>
+      <TableRow>
+        <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Name</TableCell>
+        <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Required</TableCell>
+        <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Format and Usage</TableCell>
+        <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Description</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>origin_latlng</TableCell>
+        <TableCell>Yes</TableCell>
+        <TableCell>
+          <strong>Type:</strong> string<br />
+          Format: 32 character alphanumeric string<br />
+          Example: origin_latlng=longitude,latitude
+        </TableCell>
+        <TableCell>
+          A origin_latlng coordinates longitude and latitude in the API.
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>destination_latlng</TableCell>
+        <TableCell>Yes</TableCell>
+        <TableCell>
+          <strong>Type:</strong> string<br />
+          Format: 32 character alphanumeric string<br />
+          Example: destination_latlng=longitude,latitude
+        </TableCell>
+        <TableCell>
+          A destination_latlng coordinates longitude and latitude in the API.
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>publishableKey</TableCell>
+        <TableCell>Yes</TableCell>
+        <TableCell>
+          <strong>Type:</strong> string<br />
+          Format: alphanumeric string<br />
+          Example: publishableKey=01HQGAXKYD75JG27B4WKNSQ7G3
+        </TableCell>
+        <TableCell></TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>annotations</TableCell>
+        <TableCell>Yes</TableCell>
+        <TableCell>
+          <strong>Type:</strong> string<br />
+          Format: alphanumeric<br />
+          Example: annotations=distance,duration
+        </TableCell>
+        <TableCell>
+          <Box component="span" sx={{ color: '#b055b0', fontWeight: 'bold' }}>
+            annotations
+          </Box> to get data in response.
+        </TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</TableContainer>
+    <Typography className='HeaderResposive-Doc'  variant="h4" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 10 ,mb:5 }}>
+    Sample Queries - Distance API
       </Typography>
 
       {/* GET Request Example 1 */}
-      <Typography className='HeaderResposive-Doc'  variant="h4" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 4 }}>
-        GET Request Example 1
+      <Typography className='HeaderResposive-Doc'  variant="h5" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
+      GET Request Example 1
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Let's look at a simple place request with a{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box> pair for a being made by a place in the response.
+      Let’s look at a simple Diection request with
+
+a origin_latlng, destination_latlg, publishableKey and annotations.
       </Typography>
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Request
       </Typography>
       <Box 
@@ -199,12 +203,11 @@ const FribeMapService = () => {
       >
            
         <Typography variant="body2" component="pre" sx={{ whiteSpace: 'pre-wrap', color: '#333' }}>
-          curl --location 'https://maps.fribe.io/api/user/place/textsearch?search=oman&publishableKey=01HQGAXKYD75JG27B4WKNSQ7G3' \{'\n'}
-          --header 'accept: application/json'
+        curl --location 'https://maps.fribe.io/api/user/place/distance?origin_latlng=57.535793%2C22.376252&destination_latlg=57.535236%2C22.376083&publishableKey=01HQGAXKYD75JG27B4WKNSQ7G3&annotations=distance%2Cduration'
         </Typography>
       </Box>
 
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Response
       </Typography>
 
@@ -221,76 +224,50 @@ const FribeMapService = () => {
         }}
       >
         <Typography variant="body2" component="pre" sx={{ whiteSpace: 'pre-wrap', color: '#333' }}>
-          {'{\n'}
-          {'  "statusCode": 200,\n'}
-          {'  "message": "Success",\n'}
-          {'  "_pagination": {\n'}
-          {'    "total": 5271,\n'}
-          {'    "totalPage": 20,\n'}
-          {'    "currentPage": 0\n'}
-          {'  },\n'}
-          {'  "data": [\n'}
-          {'    {\n'}
-          {'      "_id": "b3090b1d-ddd9-4689-b568-69f18f5936a3",\n'}
-          {'      "shortId": "01H6BMDGXGNGRT80ZMKKY347WW",\n'}
-          {'      "formattedAddress": "a\'dawha st، صلالة 211",\n'} // Single quote escaped
-          {'      "name": "صالون الجود للتجميل النسائي",\n'}
-          {'      "city": "صلالة",\n'}
-          {'      "country": "oman",\n'}
-          {'      "alpha2": "OM",\n'}
-          {'      "alpha3": "OMN",\n'}
-          {'      "countryCode": "512",\n'}
-          {'      "latitude": 17.0202989,\n'}
-          {'      "longitude": 54.0842714\n'}
-          {'    },\n'}
-          {'    {\n'}
-          {'      "_id": "07bc2319-fe65-437f-bed3-cea6ca19de21",\n'}
-          {'      "shortId": "01H6BMDHA24NVD8A0TQEH60VZZ",\n'}
-          {'      "formattedAddress": "239j+462 al ghuayra street new صلالة",\n'}
-          {'      "name": "dhofar beauty",\n'}
-          {'      "city": "صلالة",\n'}
-          {'      "country": "oman",\n'}
-          {'      "alpha2": "OM",\n'}
-          {'      "alpha3": "OMN",\n'}
-          {'      "countryCode": "512",\n'}
-          {'      "latitude": 17.0177578,\n'}
-          {'      "longitude": 54.0805267\n'}
-          {'    }\n'}
-          {'  ]\n'}
-          {'}'}
+        {'{\n'}
+{'  "code": "Ok",\n'}
+{'  "routes": [\n'}
+{'    {\n'}
+{'      "geometry": "yzcgB_|tiI`CKVChI_@l@ChCOlGWnDQhAERAbCKtBIfDSLAp@B|ADlCBbCBlBBpJHfIFvCNvJpBdDn@xDJtFFrBEzPeApDOxMLhJJPDBPIhJOzOE^CnF?|@IjE?VXAdFQbEQdGSFBDDBF?HCFEDyGTGvF[pWGdFCdB",\n'}
+{'      "legs": [\n'}
+{'        {\n'}
+{'          "steps": [\n'}
+{'            {\n'}
+{'              "intersections": [\n'}
+{'                {\n'}
+{'                  "out": 0,\n'}
+{'                  "entry": [true],\n'}
+{'                  "bearings": [175],\n'}
+{'                  "location": [54.179359, 17.064285]\n'}
+{'                },\n'}
+{'                {\n'}
+{'                  "out": 1,\n'}
+{'                  "location": [54.179424, 17.063639],\n'}
+{'                  "bearings": [0, 180, 270],\n'}
+{'                  "entry": [false, true, true],\n'}
+{'                  "in": 0\n'}
+{'                }\n'}
+{'              ]\n'}
+{'            }\n'}
+{'          ]\n'}
+{'        }\n'}
+{'      ]\n'}
+{'    }\n'}
+{'  ]\n'}
+{'}'}
         </Typography>
       </Box>
 
       {/* GET Request Example 2 */}
-      <Typography className='HeaderResposive-Doc'  variant="h4" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 4 }}>
+      <Typography className='HeaderResposive-Doc'  variant="h5" component="h3" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         GET Request Example 2
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.6 }}>
-        Taking the next step to use further features offered in Places API. For the same{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          search
-        </Box> and{' '}
-        <Box 
-          component="span" 
-          sx={{ 
-            border: '1px solid gray', 
-            padding: '0 4px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            color: '#b055b0',
-          }}>
-          publishableKey
-        </Box>, let's request another place search.
+      Taking the next step to use further features offered in direction API. For the different geometrics
+
+
       </Typography>
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Request
       </Typography>
       <Box 
@@ -304,12 +281,11 @@ const FribeMapService = () => {
         }}
       >
         <Typography variant="body2" component="pre" sx={{ whiteSpace: 'pre-wrap', color: '#333' }}>
-        curl --location 'https://maps.fribe.io/api/user/place/textsearch?search=USA&publishableKey=01HQGAXKYD75JG27B4WKNSQ7G3' \
-        --header'accept: application/json'
+        curl --location 'https://maps.fribe.io/api/user/place/distance?origin_latlng=57.535793%2C22.376252&destination_latlg=57.535236%2C22.376083&publishableKey=01HQGAXKYD75JG27B4WKNSQ7G3&annotations=distance%2Cduration'
         </Typography>
       </Box>
 
-      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 2 }}>
+      <Typography variant="h6" component="h5" gutterBottom sx={{ lineHeight: 1.2, mt: 5 ,mb:3 }}>
         Response
       </Typography>
 
@@ -326,43 +302,33 @@ const FribeMapService = () => {
         }}
       >
        <Typography variant="body2" component="pre" sx={{ whiteSpace: 'pre-wrap', color: '#333' }}>
-  {'{\n'}
-  {'  "statusCode": 200,\n'}
-  {'  "message": "Success",\n'}
-  {'  "_pagination": {\n'}
-  {'    "total": 5271,\n'}
-  {'    "totalPage": 20,\n'}
-  {'    "currentPage": 0\n'}
-  {'  },\n'}
-  {'  "data": [\n'}
-  {'    {\n'}
-  {'      "_id": "86ae5a1e-210f-4e88-9247-ab85cfc580f8",\n'}
-  {'      "shortId": "01H6BMDGXK845RRT665G7S6GJM",\n'}
-  {'      "formattedAddress": "22gv+297، صلالة",\n'}
-  {'      "name": "hair dresser & saloon - qais al tasfeeh",\n'}
-  {'      "city": "صلالة",\n'}
-  {'      "country": "oman",\n'}
-  {'      "alpha2": "OM",\n'}
-  {'      "alpha3": "OMN",\n'}
-  {'      "countryCode": "512",\n'}
-  {'      "latitude": 17.0250271,\n'}
-  {'      "longitude": 54.0434181\n'}
-  {'    },\n'}
-  {'    {\n'}
-  {'      "_id": "06d82902-db22-4696-9996-a0151e4becc2",\n'}
-  {'      "shortId": "01H6BMDGXKRWG921KKVAGZQRXR",\n'}
-  {'      "formattedAddress": "2486+3pf، شارع السلام، صلالة",\n'}
-  {'      "name": "men\'s hair salon",\n'}
-  {'      "city": "صلالة",\n'}
-  {'      "country": "oman",\n'}
-  {'      "alpha2": "OM",\n'}
-  {'      "alpha3": "OMN",\n'}
-  {'      "countryCode": "512",\n'}
-  {'      "latitude": 17.0152021,\n'}
-  {'      "longitude": 54.1118063\n'}
-  {'    }\n'}
-  {'  ]\n'}
-  {'}'}
+       {'{\n'}
+{'  "code": "Ok",\n'}
+{'  "routes": [\n'}
+{'    {\n'}
+{'      "geometry": {\n'}
+{'        "coordinates": [\n'}
+{'          [\n'}
+{'            54.179359,\n'}
+{'            17.064285\n'}
+{'          ],\n'}
+{'          [\n'}
+{'            54.179424,\n'}
+{'            17.063639\n'}
+{'          ],\n'}
+{'          [\n'}
+{'            54.179436,\n'}
+{'            17.063516\n'}
+{'          ],\n'}
+{'          [\n'}
+{'            54.1796,\n'}
+{'            17.061867\n'}
+{'          ]\n'}
+{'        ]\n'}
+{'      }\n'}
+{'    }\n'}
+{'  ]\n'}
+{'}'}
 </Typography>
       </Box>
     </Container>
