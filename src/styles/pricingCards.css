@@ -521,6 +521,15 @@ height: 70%;
     width: 95%;
     margin: 0 auto;
 }
+.sdk-link {
+  color: #6E00DC;
+  text-decoration: underline;
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif !important;
+
+
+}
+
 }
 
 @media (min-width: 300px) and (max-width: 500px) {

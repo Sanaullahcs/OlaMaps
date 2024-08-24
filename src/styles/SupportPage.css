@@ -17,7 +17,7 @@
 @media (min-width: 1300px) and (max-width: 1550px) {
   .hero-subheading-support {
     color: #555555ce;
-    font-size: 18px !important;
+    font-size: 15px !important;
     font-weight: 500 !important;
     line-height: 20px;
     text-align: center;
@@ -35,7 +35,7 @@
 @media (min-width: 300px) and (max-width: 1300px) {
   .hero-subheading-support {
     color: #555555ce;
-    font-size: 15px !important;
+    font-size: 13px !important;
     font-weight: 500 !important;
     line-height: 20px;
     text-align: center;
