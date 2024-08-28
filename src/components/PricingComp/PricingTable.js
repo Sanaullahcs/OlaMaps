@@ -17,7 +17,7 @@ import "./PricingTable.css";
 // Custom styles with reduced font size, padding, and margin
 const CustomTableCell = styled(TableCell)(({ theme }) => ({
   border: '1px solid #ccc',
-  padding: '8px',  // Reduced padding
+  padding: '18px 10px',  // Reduced padding
   textAlign: 'left',
   fontSize: '0.875em',  // Reduced font size
   backgroundColor: '#f5f5f5',  
@@ -26,7 +26,7 @@ const CustomTableCell = styled(TableCell)(({ theme }) => ({
 const CustomHeaderCell = styled(TableCell)(({ theme }) => ({
   backgroundColor: '#6E00DC',
   color: '#FFFFFF',
-  fontSize: '1.125em',  // Reduced font size
+  fontSize: '1.1em',  // Reduced font size
   fontWeight: '700',
   textAlign: 'left',
   padding: '10px',  // Reduced padding
@@ -66,8 +66,8 @@ const TableWrapper = styled(Container)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     width: '100%',
   },
-  [theme.breakpoints.between(1400, 1401)]: {
-    width: '70%',
+  [theme.breakpoints.between(900, 1801)]: {
+    width: '80%',
   },
   margin: '0 auto',
   padding: '10px',  // Reduced padding
@@ -106,16 +106,16 @@ const PricingTable = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <CustomHeaderCell>API</CustomHeaderCell>
-                <CustomHeaderCell>Monthly Volume</CustomHeaderCell>
-                <CustomHeaderCell align="center">First Year</CustomHeaderCell>
-                <CustomHeaderCell>Second Year</CustomHeaderCell>
+                <CustomHeaderCell>Products</CustomHeaderCell>
+                <CustomHeaderCell>Monthly Volume Range <br/>(Price per REQUEST)</CustomHeaderCell>
+                <CustomHeaderCell align="center">Price USD - per 1000</CustomHeaderCell>
+                <CustomHeaderCell>Price Per API</CustomHeaderCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              <TableRow>
-                <CustomTableCell rowSpan={2}>Autocomplete</CustomTableCell>
-                <CustomTableCell>1 - 5,000,000</CustomTableCell>
+              {/* <TableRow>
+                <CustomTableCell rowSpan={2}>Search Places API</CustomTableCell>
+                <CustomTableCell>0 - 30,000</CustomTableCell>
                 <CenteredTextCell rowSpan={8}>
                   F<br/>R<br/>E<br/>E
                 </CenteredTextCell>
@@ -151,7 +151,74 @@ const PricingTable = () => {
               <TableRow>
                 <CustomTableCell>5,000,001 - 10,000,000</CustomTableCell>
                 <CustomTableCell>₹0.035</CustomTableCell>
-              </TableRow>
+              </TableRow> */}
+              <TableRow>
+    <CustomTableCell rowSpan={3}>Search Places API</CustomTableCell>
+    <CustomTableCell>0 - 30,000</CustomTableCell>
+    <FreeTextCell>Free</FreeTextCell>
+    <CustomTableCell>0</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>30,001 - 500,000</CustomTableCell>
+    <CustomTableCell>1.2</CustomTableCell>
+    <CustomTableCell>0.0012</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>500,001+</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+</TableRow>
+
+<TableRow>
+    <CustomTableCell rowSpan={3}>Nearby Search <br/>API/Geocoding</CustomTableCell>
+    <CustomTableCell>0 - 30,000</CustomTableCell>
+    <FreeTextCell>Free</FreeTextCell>
+    <CustomTableCell>0</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>30,001 - 500,000</CustomTableCell>
+    <CustomTableCell>1.2</CustomTableCell>
+    <CustomTableCell>0.0012</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>500,001+</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+</TableRow>
+
+<TableRow>
+    <CustomTableCell rowSpan={3}>Directions API</CustomTableCell>
+    <CustomTableCell>0 - 30,000</CustomTableCell>
+    <FreeTextCell>Free</FreeTextCell>
+    <CustomTableCell>0</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>30,001 - 500,000</CustomTableCell>
+    <CustomTableCell>1.4</CustomTableCell>
+    <CustomTableCell>0.0014</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>500,001+</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+</TableRow>
+
+<TableRow>
+    <CustomTableCell rowSpan={3}>Distance Matrix API</CustomTableCell>
+    <CustomTableCell>0 - 30,000</CustomTableCell>
+    <FreeTextCell>Free</FreeTextCell>
+    <CustomTableCell>0</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>30,001 - 500,000</CustomTableCell>
+    <CustomTableCell>1.4</CustomTableCell>
+    <CustomTableCell>0.0014</CustomTableCell>
+</TableRow>
+<TableRow>
+    <CustomTableCell>500,001+</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+    <CustomTableCell>Contact Sales</CustomTableCell>
+</TableRow>
             </TableBody>
           </Table>
         </TableContainer>
